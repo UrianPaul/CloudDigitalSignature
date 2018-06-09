@@ -1,0 +1,74 @@
+﻿@model New_site.Models.Model
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 style="color:white;margin-top:80px;">Details</h2>
+
+<div>
+    <h4>Model</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tara_forma_scurta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tara_forma_scurta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tara)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tara)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Localitate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Localitate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Organizatie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Organizatie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Departament)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departament)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Domeniu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Domeniu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,60 @@
+﻿@using Microsoft.AspNet.Identity
+
+
+@if (Request.IsAuthenticated)
+{
+
+    @Html.AntiForgeryToken()
+    <div class="wrapper" style="text-align: center;">
+
+        <button class="btn-danger btn-lg" style="position:absolute;top:50%;right:35%;" onclick="location.href='@Url.Action("Generare_certificat","Home",new {target="_blank" })'">
+            Apasa aici pentru a-ti genera propriul certificat!
+        </button>
+
+        <button class="btn-danger btn-lg" style="position:absolute;top:60%;right:35%;background-color:blue;" onclick="location.href='@Url.Action("Instalare_certificat","Home",new {target="_blank" })'">
+            Apasa aici pentru a instala certificatul generat!
+        </button>
+       
+        @*<button class="button btn-danger btn-lg" style="position:absolute;top:50%;right:35%;" id="cont" data-toggle="modal" data-target="#myModalNorm">
+        Apasa aici pentru a-ti genera propriul certificat!
+        </button>*@
+
+    </div>
+
+    <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="border-radius:15px;">
+
+                <!-- Modal Header -->
+                <div class="modal-header" style="background-color:rgb(1, 31, 53);">
+                    <button type="button" class="close"
+                            data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <center><h2 style="color:#4a5c92;">Felicitari!</h2></center>
+
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <h3 style="color:gray;">Certificatul dumneavoastra a fost generat si salvat pe Cloud. Acum aveti posibilitatea sa va
+                    semnati aplicatiile. Mult succes! </h3>
+
+
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer" style="background-color:rgb(1, 31, 53);">
+                    <p style="color:#4a5c92;">&copy; @DateTime.Now.Year - Urian Paul Danut</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+     <h1 style="font:bold 300 px arial;color:red;margin-top:100px;">Bine ai venit! Conecteaza-te sau creaza-ti un cont pentru a-ti putea genera si instala propriul certificat.</h1>
+
+}

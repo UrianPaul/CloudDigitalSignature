@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+@using Microsoft.AspNet.Identity
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login Page</title>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/app/app.js"></script>
+    <script src="~/Scripts/app/defaultController.js"></script>
+    <script src=""></script>
+</head>
+
+<body background="~/Content/Images/4.jpg" ng-app="starter" ng-controller="DefaultController">
+
+
+
+    <h2 style="color:white;margin-top:80px;">Despre noi</h2>
+    @if (Request.IsAuthenticated)
+    {
+        @*<h1 style="color:red;">Testing...</h1>
+        <label style="color:red;">Nr1.</label>
+        <input type="text" id="nr1" ng-model="a" name="N1" value="0" />
+        <br />
+        <label style="color:red;">Nr2.</label>
+        <input type="text" id="nr2" ng-model="b" name="N2" value="0" />
+        <br />
+        <input type="submit" value="Calculeaza" ng-click="takeValues(a,b)"/>
+        <br />
+        <div style="color:red;font:bold 20px arial;"> Suma este: {{suma.data}} </div>*@
+      
+    }
+    else
+    {
+
+    }
+</body>
+
+</html>
+
